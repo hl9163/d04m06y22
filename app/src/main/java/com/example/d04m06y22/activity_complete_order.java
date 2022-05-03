@@ -72,7 +72,7 @@ public class activity_complete_order extends AppCompatActivity implements Adapte
             refFoodCompany.removeEventListener(companiesListener);
         }
         if(workerListener != null){
-            refFoodCompany.removeEventListener(workerListener);
+            refWorkers.removeEventListener(workerListener);
         }
     }
     /**

@@ -80,6 +80,22 @@ public class activity_show_details extends AppCompatActivity implements AdapterV
 
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(workerListener != null){
+            refWorkers.removeEventListener(workerListener);
+        }
+        if(ordersListener != null){
+            refOrders.removeEventListener(ordersListener);
+        }
+        if(fcListener != null){
+            refFoodCompany.removeEventListener(fcListener);
+        }
+
+    }
+
     /**
      * make to the spinner the list of options to the user.
      * <p>
